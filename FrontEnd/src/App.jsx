@@ -7,7 +7,7 @@ import SignupForm from "./Components/SignupForm";
 import { useState } from "react";
 import Nopage from "./Components/Nopage";
 import UserDashboard from "./Components/UserDashboard";
-import "./app.css";
+import "./App.css";
 import ChangePassword from "./Components/ChangePassword";
 import ProfilePage from "./Components/ProfilePage";
 import TotalEmployee from "./Components/TotalEmployee";
@@ -39,7 +39,8 @@ function App() {
           path="/home/"
           element={
             <ProtectedRoute element={<Home login={setAuthenticated} />} />
-          }>
+          }
+        >
           {role === "user" && <Route index element={<UserDashboard />} />}
           {role === "admin" && <Route index element={<Dashboard />} />}
           <Route
